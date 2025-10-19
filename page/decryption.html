@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Decryption</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<header>
+    <nav id="nav-bar">
+        <div id="logo">Ceaser Cipher</div>
+        <ul class="nav-links">
+            <a href="../index.html">
+                <li>Home</li>
+            </a>
+            <a href="encryption.html">
+                <li>Encryption</li>
+            </a>
+            <a href="decryption.html">
+                <li>Decryption</li>
+            </a>
+        </ul>
+        <div class="menu-sec">
+            <img src="../assets/menu.svg" alt="menu" id="menu-icon"/>
+            <ul class="menu-links">
+                <a href="../index.html">
+                    <li>Home</li>
+                </a>
+                <a href="encryption.html">
+                    <li>Encryption</li>
+                </a>
+                <a href="decryption.html">
+                    <li>Decryption</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main class="flex justify-center align-center flex-col">
+    <!-- Plain text Block Start -->
+    <div id="encyption">
+        <h1>Decryption</h1>
+        <div id="cipher-text-field">
+            <label for="cipher-text">Enter Cipher Text</label>
+            <textarea
+                    name="cipher-text"
+                    id="cipher-text"
+                    rows="5"
+                    cols="30"
+            ></textarea>
+        </div>
+    </div>
+    <!-- Plain text Block End -->
+
+    <!-- Shift Key Block -->
+    <div
+            class="shift-key-field flex flex-col gap-10 mt-30 justify-center align-center"
+    >
+        <label for="shift-key">Shift Key</label>
+        <div class="flex justify-center align-center gap-10">
+            <div
+                    class="h-30 w-30 bg-white flex justify-center align-center round-full bold"
+                    id="dec-btn"
+            >
+                -
+            </div>
+            <input
+                    type="text"
+                    id="shift-key"
+                    value="3"
+                    class="h-30 text-center round-full"
+            />
+            <div
+                    class="h-30 w-30 bg-white flex justify-center align-center round-full bold"
+                    id="inc-btn"
+            >
+                +
+            </div>
+        </div>
+    </div>
+    <!-- Shift Key Block End -->
+
+    <button id="decrypt-btn" class="mt-30">Decrypt</button>
+
+    <!-- Result Encryted Result Start -->
+    <div class="flex justify-center align-center flex-col mt-30 gap-10 w-100-p" id="result-box">
+        <label for="plain-text">Plain Text</label>
+        <textarea name="result" id="plain-text" class="w-50-p" rows="5" cols="30" placeholder="Plain Text..." readonly></textarea>
+    </div>
+    <!-- Result Encryted Result End-->
+</main>
+<script src="../js/app.js"></script>
+<script src="../js/decryption.js"></script>
+</body>
+</html>
