@@ -3,32 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ceaser Cipher</title>
+    <title>Caesar Cipher</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
   </head>
   <body>
     <header>
       <nav id="nav-bar">
-        <div id="logo">Ceaser Cipher</div>
+        <div id="logo">Caesar Cipher</div>
+
+        <!-- Desktop Navigation -->
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="page/encryption.html">Encryption</a></li>
           <li><a href="page/decryption.html">Decryption</a></li>
           <li><a href="page/documentation.html">Documentation</a></li>
         </ul>
+
+        <!-- Mobile Menu -->
         <div class="menu-sec">
           <img src="assets/menu.svg" alt="menu" id="menu-icon" />
           <ul class="menu-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="page/encryption.html">Encryption</a></li>
             <li><a href="page/decryption.html">Decryption</a></li>
-            <li><a href="page/documentation.html">Decryption</a></li>
+            <li><a href="page/documentation.html">Documentation</a></li>
           </ul>
         </div>
       </nav>
     </header>
+
     <main>
-      <h1>Caesar Cipher Generator</h1>
+      <h1 class="text-center bold">Caesar Cipher Generator</h1>
       <p>
         The Caesar Cipher Generator is a classic cryptography tool that
         demonstrates one of the oldest and simplest forms of encryption. It
@@ -37,17 +43,18 @@
         “D”, “B” becomes “E”, and so on. This makes it a perfect introduction to
         understanding basic encryption and decryption concepts in computer
         science.
-        <br />
-        <br />
+      </p>
+      <br />
+      <p>
         The tool allows users to input any text and choose a custom shift value
         to generate the encoded message instantly. It also provides an option to
         decode previously encrypted text using the same shift key. The Caesar
         Cipher Generator works efficiently with both uppercase and lowercase
         characters while ignoring non-alphabet symbols. This ensures that
         punctuation and spacing remain unchanged during encryption.
-        <br />
-        <br />
-
+      </p>
+      <br />
+      <p>
         The user-friendly interface displays real-time results as the user
         types, making it ideal for beginners experimenting with cryptography.
         Developers can use this project to explore how text manipulation and
@@ -59,31 +66,7 @@
         both educational and practical encryption use cases.
       </p>
     </main>
-    <script src="js/app.js">
-              let plainText = document.querySelector("#plain-text");
-      let shiftKey = document.querySelector("#shift-key");
-      let result = document.querySelector("#result");
-      let encryptBtn = document.querySelector("#encrypt-btn");
-      let decBtn = document.querySelector("#dec-btn");
-      let incBtn = document.querySelector("#inc-btn");
 
-      incBtn.addEventListener("click", () => {
-        shiftKey.value++;
-      });
-      decBtn.addEventListener("click", () => {
-        if (shiftKey.value > 0) {
-          shiftKey.value--;
-        }
-      });
-
-      encryptBtn.addEventListener("click", () => {
-        console.log("Button was Clicked");
-        if (plainText !== "") {
-          let string = plainText.value;
-          result.value = string;
-        }
-
-      });
-    </script>
+    <script src="js/app.js"></script>
   </body>
 </html>

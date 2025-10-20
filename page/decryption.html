@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decryption</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/utility.css" />
   </head>
   <body>
     <header>
@@ -39,23 +40,23 @@
         </div>
       </nav>
     </header>
-    <main class="flex justify-center align-center flex-col">
-      <!-- Plain text Block Start -->
-      <div id="encyption">
+    <main class="flex justify-center align-center flex-col gap-30">
+      <div id="encyption" class="flex justify-center align-center flex-col">
         <h1>Decryption</h1>
-        <div id="cipher-text-field">
+        <div
+          id="cipher-text-field"
+          class="flex justify-center align-center flex-col"
+        >
           <label for="cipher-text">Enter Cipher Text</label>
           <textarea
             name="cipher-text"
             id="cipher-text"
             rows="5"
-            cols="30"
+            cols="60"
           ></textarea>
         </div>
       </div>
-      <!-- Plain text Block End -->
 
-      <!-- Shift Key Block -->
       <div
         class="shift-key-field flex flex-col gap-10 mt-30 justify-center align-center"
       >
@@ -81,11 +82,9 @@
           </div>
         </div>
       </div>
-      <!-- Shift Key Block End -->
 
       <button id="decrypt-btn" class="mt-30">Decrypt</button>
 
-      <!-- Result Encryted Result Start -->
       <div
         class="flex justify-center align-center flex-col mt-30 gap-10 w-100-p"
         id="result-box"
@@ -96,12 +95,11 @@
           id="plain-text"
           class="w-50-p"
           rows="5"
-          cols="30"
+          cols="60"
           placeholder="Plain Text..."
           readonly
         ></textarea>
       </div>
-      <!-- Result Encryted Result End-->
     </main>
     <script src="../js/app.js"></script>
     <script src="../js/decryption.js"></script>
