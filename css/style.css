@@ -107,6 +107,7 @@ body {
 
 .menu-links li {
   text-align: right;
+  margin-bottom: 10px;
 }
 
 .menu-links a {
